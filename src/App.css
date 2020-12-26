@@ -1,18 +1,132 @@
+@font-face {
+  font-family: ComputerFont;
+  src: url(./fonts/Computerfont.ttf) format('truetype');
+  src: url(./fonts/Computerfont.woff) format('woff');
+
+}
+@font-face {
+  font-family: WhiteRabbit;
+  src: url(./fonts/whitrabt.ttf) format('truetype');
+  src: url(./fonts/whitrabt.woff) format('woff');
+
+}
 .App {
   text-align: center;
+  z-index:-4;
+}
+.Canvas{
+  width:100%;
+  height:550px;
+  position:absolute;
+  left:0%;
+  z-index:0;
+  background: rgb(57,67,75);
+  background: linear-gradient(180deg, rgba(57,67,75,1) 6%, rgba(87,103,117,1) 31%, rgba(87,103,117,1) 84%);
+  /*box-shadow: -1px 10px 10px black;*/
+}
+.BackgroundContainer{
+  position:relative;
+}
+.Background{
+  width:100%;
+  height:100%;
+  position:absolute;
+  left:0%;
+  z-index:-1;
+  background-color:#1c1d21;
+}
+.TitleCardPlaceholder{
+  width:100%;
+  height:475px;
+}
+.TitleCard{
+  position:absolute;
+  width:100%;
+  box-shadow: 0px 10px #6FA6A4;
+}
+.ParagraphFont{
+  font-family:Serif;
+  font-size:25px;
+  color:#E6E8DD;
+}
+.InnerTitle{
+  position:relative;
+}
+.CircleImage{
+  position:absolute;
+  width: 400px;
+  height: 400px;
+  padding:50px;
+  border-radius:50%;
+  z-index:2;
+  left: 50%;
+  margin-left: -200px;
+  top: 50%;
+  margin-top: 50px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Icon{
+  width: 300px;
+  height: 300px;
+  z-index: -1;
+  position:absolute;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .WhiteHeader {
+    position:absolute;
+    color:#E6E8DD;
+    font-family:WhiteRabbit;
+    font-size:35px;
+    margin:0 auto;
+    font-weight: normal;
+    z-index: 10;
+    left: 50%;
+    margin-left: -148px;
+    top: 50%;
+    margin-top: 425px;
   }
-}
+  .WhiteFooter{
+    position:absolute;
+    color:#E6E8DD;
+    font-family:Serif;
+    font-size:25px;
+    margin:0 auto;
+    padding-bottom:50px;
+    z-index: 10;
+    left: 50%;
+    margin-left: -121.845px;
+    top: 50%;
+    margin-top: 485px;
+  }
 
+@media screen and (min-width: 800) {
+.WhiteHeader {
+  position:absolute;
+  color:#E6E8DD;
+  font-family:WhiteRabbit;
+  font-size:60px;
+  margin:0 auto;
+  font-weight: normal;
+  z-index: 10;
+  left: 50%;
+  margin-left: -257.15px;
+  top: 50%;
+  margin-top: 425px;
+}
+.WhiteFooter{
+  position:absolute;
+  color:#E6E8DD;
+  font-family:Serif;
+  font-size:35px;
+  margin:0 auto;
+  padding-bottom:50px;
+  z-index: 10;
+  left: 50%;
+  margin-left: -170.58px;
+  top: 50%;
+  margin-top: 485px;
+}
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -22,17 +136,161 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  z-index: 10;
+}
+.TableHeaderCell{
+  text-align:center;
+  font-family:Serif;
+  font-size:20px;
+  font-weight:bold;
+  color:#E6E8DD;
+  border-bottom: 6px solid #6FA6A4;
+  margin: 0;
+  z-index: 10;
+  min-width:400px;
+}
+.TableCell{
+  text-align:center;
+  font-family:Serif;
+  font-size:20px;
+  color:#E6E8DD;
+  border-bottom: 4px solid #6FA6A4;
+  margin: 0;
+  z-index: 10;
+  min-width:400px;
+}
+.TableFooterCell{
+  text-align:center;
+  font-family:Serif;
+  font-size:20px;
+  color:#E6E8DD;
+  margin: 0;
+  z-index: 10;
+  min-width:400px;
+}
+.STableHeaderCell{
+  text-align:center;
+  font-family:Serif;
+  font-size:20px;
+  font-weight:bold;
+  color:#E6E8DD;
+  border-bottom: 6px solid #6FA6A4;
+  margin: 0;
+  z-index: 10;
+  min-width:400px;
+}
+.STableCell{
+  text-align:center;
+  font-family:Serif;
+  font-size:20px;
+  color:#E6E8DD;
+  border-bottom: 4px solid #6FA6A4;
+  margin: 0;
+  z-index: 10;
+  min-width:400px;
+}
+.STableFooterCell{
+  text-align:center;
+  font-family:Serif;
+  font-size:20px;
+  color:#E6E8DD;
+  margin: 0;
+  z-index: 10;
+  min-width:400px;
+}
+.SkillsTable{
+  background-color:#576775;
+  border: 4px solid #6FA6A4;
+  border-radius: 1%;
+  margin: 0 auto;
+  width:100%;
+  text-align:center;
+  border-spacing: 0;
+  float:left;
+  box-shadow: 5px 7px black;
+  z-index: 10;
+  min-width:400px;
+}
+.SoftwareTable{
+  background-color:#576775;
+  border: 4px solid #6FA6A4;
+  border-radius: 1%;
+  margin: 0 auto;
+  width:100%;
+  text-align:center;
+  border-spacing: 0;
+  float:right;
+  box-shadow: 5px 7px black;
+  z-index: 10;
+  min-width:400px;
+}
+  .mobileTable{
+
+    padding-top:20px;
+    display:inline-block;
+    z-index: 10;
+    float: none;
+  }
+@media screen and (min-width: 800px) {
+.floatRight{
+  display: inline-block;
+  width:20%;
+  padding:20px;
+  z-index: 10;
+}
+.floatLeft{
+  display: inline-block;
+  width:20%;
+  padding:20px;
+  z-index: 10;
+}
+}
+.SubHeader{
+  font-family:WhiteRabbit;
+  font-size:50px;
+  color:#E6E8DD;
+  z-index: 10;
+}
+@media screen and (max-width: 799px) {
+  .ProjectBackground{
+    background: rgba(87,103,117,1);
+    padding-top:20px;
+    padding-bottom:20px;
+    margin:0 auto;
+  }
+  .Thumbnail{
+    width:(90vw);
+    height:calc(((90vw) * 0.5625));
+  }
+  
+}
+@media screen and (min-width: 800px) {
+  .ProjectBackground{
+    background: rgba(87,103,117,1);
+    width:70%;
+    padding-top:20px;
+    padding-bottom:20px;
+    margin:0 auto;
+  }
+  .Thumbnail{
+    width:(60vw*0.33);
+    height:calc(((60vw*0.33) * 0.5625));
+  }
+
 }
 
-.App-link {
-  color: #61dafb;
+.ProjectTable{
+  width:100%;
+  height:100%;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ButtonProject{
+  background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+.SelectorButton{
+   background-color: #97aec2;
 }

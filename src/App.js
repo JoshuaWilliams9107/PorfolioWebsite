@@ -32,6 +32,7 @@ function App() {
       <br/>
       <br/>
       <br/>
+      <Paragraph fontStyle="SubHeader" contents="- ABOUT ME -" delay={0}/>
       <br/>
       <br/>
       <br/>

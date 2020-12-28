@@ -27,17 +27,16 @@ export default function ProjectView(){
     {
     exists:true, name:"Metube", thumbnail:require("./images/Metube.png"), link:"https://github.com/JoshuaWilliams9107/Metube",
     exists2:true,name2:"DriverHub", thumbnail2:require("./images/DriverHub.png"), link2:"https://github.com/JoshuaWilliams9107/DriverHub",
-    exists3:true, name3:"This Website", thumbnail3:require("./images/PortfolioWebsite.png"), link3:"http://www.google.com/"
+    exists3:true, name3:"This Website", thumbnail3:require("./images/PortfolioWebsite.png"), link3:"https://github.com/JoshuaWilliams9107/PorfolioWebsite"
     }]
     const DesktopApps = [
     {exists:true, name:"Chess Program", thumbnail:require("./images/Chess.png"), link:"https://github.com/JoshuaWilliams9107/Chess",
-     exists2:true, name2:"Rune Importer", thumbnail2:require("./images/RuneImporter.png"), link2:"http://www.google.com/",
-     exists3:true, name3:"OpenGL Model Viewer", thumbnail3:require("./images/OpenGL.png"), link3:"http://www.google.com/"
+     exists2:true, name2:"Rune Importer", thumbnail2:require("./images/RuneImporter.png"), link2:"https://github.com/JoshuaWilliams9107/RuneImporter"
     }]
     const VideoGames = [
-    {exists:true, name:"VR Fishing Simulator", thumbnail:require("./images/FishingSimulator.png"), link:"http://www.google.com/",
-     exists2:true, name2:"3D Tetris", thumbnail2:require("./images/3DTetris.png"), link2:"http://www.google.com/",
-     exists3:true, name3:"Rubix Cube", thumbnail3:require("./images/RubixCube.png"), link3:"http://www.google.com/"
+    {exists:true, name:"VR Fishing Simulator", thumbnail:require("./images/FishingSimulator.png"), link:"https://gitlab.com/group-6-vr/fishing-simulator",
+     exists2:true, name2:"Falling Puzzle Game", thumbnail2:require("./images/FallingPuzzleGame.png"), link2:"https://github.com/JoshuaWilliams9107/Falling-Puzzle-Game",
+     exists3:false, name3:null, thumbnail3:null, link3:null
     }
     ]
     if(radioState == 1){

@@ -10,6 +10,11 @@
   src: url(./fonts/whitrabt.woff) format('woff');
 
 }
+@font-face{
+  font-family: PTSans;
+  src: url(./fonts/PTSans-Regular.ttf) format('truetype');
+  src: url(./fonts/PTSans-Regular.woff) format('woff');
+}
 .App {
   text-align: center;
   z-index:-4;
@@ -45,7 +50,7 @@
   box-shadow: 0px 10px #6FA6A4;
 }
 .ParagraphFont{
-  font-family:Serif;
+  font-family:PTSans;
   font-size:25px;
   color:#E6E8DD;
 }
@@ -65,13 +70,18 @@
   margin-top: 50px;
 }
 
+.BlackText{
+  font-family:PTSans;
+  font-size:25px;
+  color:black;
+}
 .Icon{
   width: 300px;
   height: 300px;
   z-index: -1;
   position:absolute;
 }
-
+@media screen and (max-width: 799px) {
   .WhiteHeader {
     position:absolute;
     color:#E6E8DD;
@@ -88,41 +98,53 @@
   .WhiteFooter{
     position:absolute;
     color:#E6E8DD;
-    font-family:Serif;
-    font-size:25px;
+    font-family:PTSans;
+    font-size:27px;
     margin:0 auto;
     padding-bottom:50px;
     z-index: 10;
     left: 50%;
-    margin-left: -121.845px;
+    margin-left: -119.735px;
     top: 50%;
     margin-top: 485px;
   }
-
-@media screen and (min-width: 800) {
+  .AboutMeContainer{
+	margin: 0 auto;
+	width:95%;
+	background-color: #E6E8DD; 
+	text-align:left;
+  }
+}
+@media screen and (min-width: 800px) {
+.AboutMeContainer{
+	margin: 0 auto;
+	width:70%;
+	background-color: #E6E8DD; 
+	text-align:left;
+}
 .WhiteHeader {
   position:absolute;
   color:#E6E8DD;
   font-family:WhiteRabbit;
-  font-size:60px;
+  font-size:45px;
   margin:0 auto;
   font-weight: normal;
   z-index: 10;
   left: 50%;
-  margin-left: -257.15px;
+  margin-left: -192.86px;
   top: 50%;
   margin-top: 425px;
 }
 .WhiteFooter{
   position:absolute;
   color:#E6E8DD;
-  font-family:Serif;
-  font-size:35px;
+  font-family:PTSans;
+  font-size:34.7px;
   margin:0 auto;
   padding-bottom:50px;
   z-index: 10;
   left: 50%;
-  margin-left: -170.58px;
+  margin-left: -153.885px;
   top: 50%;
   margin-top: 485px;
 }
@@ -140,7 +162,7 @@
 }
 .TableHeaderCell{
   text-align:center;
-  font-family:Serif;
+  font-family:PTSans;
   font-size:20px;
   font-weight:bold;
   color:#E6E8DD;
@@ -151,7 +173,7 @@
 }
 .TableCell{
   text-align:center;
-  font-family:Serif;
+  font-family:PTSans;
   font-size:20px;
   color:#E6E8DD;
   border-bottom: 4px solid #6FA6A4;
@@ -161,7 +183,7 @@
 }
 .TableFooterCell{
   text-align:center;
-  font-family:Serif;
+  font-family:PTSans;
   font-size:20px;
   color:#E6E8DD;
   margin: 0;
@@ -170,7 +192,7 @@
 }
 .STableHeaderCell{
   text-align:center;
-  font-family:Serif;
+  font-family:PTSans;
   font-size:20px;
   font-weight:bold;
   color:#E6E8DD;
@@ -181,7 +203,7 @@
 }
 .STableCell{
   text-align:center;
-  font-family:Serif;
+  font-family:PTSans;
   font-size:20px;
   color:#E6E8DD;
   border-bottom: 4px solid #6FA6A4;
@@ -191,7 +213,7 @@
 }
 .STableFooterCell{
   text-align:center;
-  font-family:Serif;
+  font-family:PTSans;
   font-size:20px;
   color:#E6E8DD;
   margin: 0;
@@ -291,6 +313,23 @@
     overflow: hidden;
     outline:none;
 }
+.ButtonResume{
+  font-family:PTSans;
+  font-size:25px;
+}
 .SelectorButton{
    background-color: #97aec2;
+}
+.LinkedIn{
+	width:184.3px;
+	height:45px;
+
+}
+.Github{
+	width:125px;
+	height:51.25px;
+
+}
+.ContactButton{
+	padding:15px;
 }

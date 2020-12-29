@@ -27,7 +27,7 @@ export default function ProjectView(){
     {
     exists:true, name:"Metube", thumbnail:require("./images/Metube.png"), link:"https://github.com/JoshuaWilliams9107/Metube",
     exists2:true,name2:"DriverHub", thumbnail2:require("./images/DriverHub.png"), link2:"https://github.com/JoshuaWilliams9107/DriverHub",
-    exists3:true, name3:"This Website", thumbnail3:require("./images/PortfolioWebsite.png"), link3:"https://github.com/JoshuaWilliams9107/PorfolioWebsite"
+    exists3:true, name3:"Porfolio Website", thumbnail3:require("./images/PortfolioWebsite.png"), link3:"https://github.com/JoshuaWilliams9107/PorfolioWebsite"
     }]
     const DesktopApps = [
     {exists:true, name:"Chess Program", thumbnail:require("./images/Chess.png"), link:"https://github.com/JoshuaWilliams9107/Chess",

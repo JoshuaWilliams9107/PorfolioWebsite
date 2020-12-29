@@ -33,7 +33,7 @@ export default class SoftwareTable extends React.Component {
             <div style={props}>
                <table className="SoftwareTable">
                <tr>
-                 <th className="TableHeaderCell">Software</th>
+                 <th className="TableHeaderCell">Software / Concepts</th>
                  
                </tr>
                <tr>
@@ -81,7 +81,7 @@ export default class SoftwareTable extends React.Component {
                 
                </tr>
                <tr>
-                 <td className="TableCell">Microsoft Office Suite</td>
+                 <td className="TableCell">Agile Development Practices</td>
                
                </tr>
                <tr>

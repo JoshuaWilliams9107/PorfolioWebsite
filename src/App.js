@@ -76,7 +76,7 @@ function App() {
       <Button  variant="light" href="https://www.linkedin.com/"><img src={LI} className="LinkedIn"/></Button>
       </span>
       <span className="ContactButton">
-      <Button variant="light" href="https://www.github.com/"><img src={Github} className="Github"/></Button>
+      <Button variant="light" href="https://github.com/JoshuaWilliams9107"><img src={Github} className="Github"/></Button>
       </span>
       <br/>
       <br/>

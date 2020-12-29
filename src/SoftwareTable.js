@@ -85,7 +85,7 @@ export default class SoftwareTable extends React.Component {
                
                </tr>
                <tr>
-                 <td className="TableFooterCell">Sublime Text</td>
+                 <td className="TableFooterCell"></td>
                
                </tr>
                </table>

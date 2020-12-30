@@ -19,7 +19,7 @@ export default class SoftwareTable extends React.Component {
   render(){
     const isMobile = window.innerWidth <= 500;
     return (
-      <span>
+      <>
       <MediaQuery minWidth={800} onChange={this.onChangeVisibilityReversed}>
         <VisibilitySensor partialVisibility={true} active = {this.active} onChange={this.onChangeVisibility} active={!this.visible}>
         {({ isVisible }) => (
@@ -32,6 +32,7 @@ export default class SoftwareTable extends React.Component {
             {props =>(
             <div style={props}>
                <table className="SoftwareTable">
+               <tbody>
                <tr>
                  <th className="TableHeaderCell">Software / Concepts</th>
                  
@@ -85,9 +86,10 @@ export default class SoftwareTable extends React.Component {
                
                </tr>
                <tr>
-                 <td className="TableFooterCell"></td>
+                 <td className="TableFooterCell">Slack</td>
                
                </tr>
+               </tbody>
                </table>
             </div>
             )}
@@ -100,6 +102,7 @@ export default class SoftwareTable extends React.Component {
         
         <div className="mobileTable">
         <table className="SoftwareTable">
+        <tbody>
                <tr>
                  <th className="TableHeaderCell">Software</th>
                  
@@ -156,12 +159,13 @@ export default class SoftwareTable extends React.Component {
                  <td className="TableFooterCell">Sublime Text</td>
                
                </tr>
+               </tbody>
                </table>
 
                </div>
 
       </MediaQuery>
-      </span>
+      </>
       
     );
   }

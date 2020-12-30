@@ -1,4 +1,3 @@
-import portrait from './images/JoshuaWilliams.jpg';
 import { Spring } from 'react-spring/renderprops';
 import {Keyframes} from 'react-spring/renderprops';
 import CanvasBackground from './Canvas.js'
@@ -26,7 +25,7 @@ export default function TitleCard() {
 
           <div className="InnerTitle"> 
             <CanvasBackground/>
-            <img className="CircleImage" src={portrait}/>
+            <img className="CircleImage" src={process.env.PUBLIC_URL + "/images/JoshuaWilliams.jpg"}/>
             <h1 className="WhiteHeader">Joshua Williams</h1>
             <p className="WhiteFooter"> Full-Stack Developer </p>
         </div>

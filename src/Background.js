@@ -2,7 +2,6 @@ import React, { useEffect, useState, useRef } from "react";
 import Particles from 'react-particles-js';
 
 export default function Background() {
-  console.log(document.getElementById("root").offsetHeight);
   return (
       
         <div className="Background"> 

@@ -19,7 +19,7 @@ export default class SkillTable extends React.Component {
   render(){
     const isMobile = window.innerWidth <= 500;
     return (
-      <span>
+      <>
       <MediaQuery minWidth={800} onChange={this.onChangeVisibilityReversed}>
         <VisibilitySensor partialVisibility={true} active = {this.active} onChange={this.onChangeVisibility} active={!this.visible}>
         {({ isVisible }) => (
@@ -32,8 +32,9 @@ export default class SkillTable extends React.Component {
             {props =>(
             <div style={props}>
                <table className="SoftwareTable">
+               <tbody>
                <tr>
-                 <th className="TableHeaderCell">Languages / Technologies</th>
+                 <th className="TableHeaderCell">Languages / Frameworks</th>
                  
                </tr>
                <tr>
@@ -88,6 +89,7 @@ export default class SkillTable extends React.Component {
                  <td className="TableFooterCell">PHP</td>
                
                </tr>
+               </tbody>
                </table>
             </div>
             )}
@@ -100,6 +102,7 @@ export default class SkillTable extends React.Component {
         
         <div className="mobileTable">
         <table className="SoftwareTable">
+        <tbody>
                <tr>
                  <th className="TableHeaderCell">Languages / Technologies</th>
                  
@@ -156,12 +159,13 @@ export default class SkillTable extends React.Component {
                  <td className="TableFooterCell">PHP</td>
                
                </tr>
+               </tbody>
                </table>
 
                </div>
 
       </MediaQuery>
-      </span>
+      </>
       
     );
   }

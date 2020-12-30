@@ -1,4 +1,3 @@
-import portrait from './images/JoshuaWilliams.jpg';
 import { Spring } from 'react-spring/renderprops';
 import {Keyframes} from 'react-spring/renderprops';
 import CanvasBackground from './Canvas.js'
@@ -19,24 +18,23 @@ export default function ProjectView(){
     )
 
   
-  function doStuff(number){
+  function changeState(number){
     setRadioState(number);
   }
   function ButtonArea(){
     const WebApps = [
     {
-    exists:true, name:"Metube", thumbnail:require("./images/Metube.png"), link:"https://github.com/JoshuaWilliams9107/Metube",
-    exists2:true,name2:"DriverHub", thumbnail2:require("./images/DriverHub.png"), link2:"https://github.com/JoshuaWilliams9107/DriverHub",
-    exists3:true, name3:"Porfolio Website", thumbnail3:require("./images/PortfolioWebsite.png"), link3:"https://github.com/JoshuaWilliams9107/PorfolioWebsite"
+    key: 1, exists:true, name:"Metube", thumbnail:process.env.PUBLIC_URL + "/images/Metube.png", link:"https://github.com/JoshuaWilliams9107/Metube",
+    exists2:true,name2:"DriverHub", thumbnail2:process.env.PUBLIC_URL + "/images/DriverHub.png", link2:"https://github.com/JoshuaWilliams9107/DriverHub",
+    exists3:true, name3:"Porfolio Website", thumbnail3:process.env.PUBLIC_URL + "/images/PortfolioWebsite.png", link3:"https://github.com/JoshuaWilliams9107/PorfolioWebsite"
     }]
     const DesktopApps = [
-    {exists:true, name:"Chess Program", thumbnail:require("./images/Chess.png"), link:"https://github.com/JoshuaWilliams9107/Chess",
-     exists2:true, name2:"Rune Importer", thumbnail2:require("./images/RuneImporter.png"), link2:"https://github.com/JoshuaWilliams9107/RuneImporter"
+    {key: 2, exists:true, name:"Chess Program", thumbnail:process.env.PUBLIC_URL + "/images/Chess.png", link:"https://github.com/JoshuaWilliams9107/Chess",
+     exists2:true, name2:"Rune Importer", thumbnail2:process.env.PUBLIC_URL + "/images/RuneImporter.png", link2:"https://github.com/JoshuaWilliams9107/RuneImporter"
     }]
     const VideoGames = [
-    {exists:true, name:"VR Fishing Simulator", thumbnail:require("./images/FishingSimulator.png"), link:"https://gitlab.com/group-6-vr/fishing-simulator",
-     exists2:true, name2:"Falling Puzzle Game", thumbnail2:require("./images/FallingPuzzleGame.png"), link2:"https://github.com/JoshuaWilliams9107/Falling-Puzzle-Game",
-     exists3:false, name3:null, thumbnail3:null, link3:null
+    {key: 3, exists:true, name:"VR Fishing Simulator", thumbnail:process.env.PUBLIC_URL + "/images/FishingSimulator.png", link:"https://gitlab.com/group-6-vr/fishing-simulator",
+     exists2:true, name2:"Falling Puzzle Game", thumbnail2:process.env.PUBLIC_URL + "/images/FallingPuzzleGame.png", link2:"https://github.com/JoshuaWilliams9107/Falling-Puzzle-Game",
     }
     ]
     if(radioState == 1){
@@ -51,92 +49,94 @@ export default function ProjectView(){
   
   function DisplayTable(props) {
     const WebApps = props.projects.map((proj) => (
-
-    <>
       <Spring
+            key={proj.key}
             from={{opacity: 0}}
             to={{opacity: 1}}
             config={{duration:500, delay: 0}}
             >
             {props =>(
-            <span style={props}>
+            <div style={props} className="table-row">
               <MediaQuery minWidth={800}>
-                <tr>
+                
                 {proj.exists ? 
                 	(
-                <td className="ThumbnailBox">
+                <div className="cell">
                   <Button variant="dark" className="ButtonProject" href={proj.link}>
-                    <img src={proj.thumbnail.default} alt = {proj.name} className="Thumbnail"/>
+                    <img src={proj.thumbnail} alt = {proj.name} className="Thumbnail"/>
                     <p className="ParagraphFont">{proj.name}</p>
                   </Button>
-                </td>
+                </div>
                 ) : null}
                 {proj.exists2 ? 
                 	(
-                <td className="ThumbnailBox">
+                <div className="cell">
                   <Button variant="dark" className="ButtonProject" href={proj.link2}>
-                    <img src={proj.thumbnail2.default} alt = {proj.name2} className="Thumbnail"/>
+                    <img src={proj.thumbnail2} alt = {proj.name2} className="Thumbnail"/>
                     <p className="ParagraphFont">{proj.name2}</p>
                   </Button>
-                </td>
+                </div>
                 ) : null}
                 {proj.exists3 ? 
                 	(
-                <td className="ThumbnailBox">
+                <div className="cell">
                   <Button variant="dark" className="ButtonProject" href={proj.link3}>
-                    <img src={proj.thumbnail3.default} alt = {proj.name3} className="Thumbnail"/>
+                    <img src={proj.thumbnail3} alt = {proj.name3} className="Thumbnail"/>
                     <p className="ParagraphFont">{proj.name3}</p>
                   </Button>
-                </td>
+                </div>
                 ) : null}
-                </tr>
+                <br/>
               </MediaQuery>
               <MediaQuery maxWidth={799}>
+              
               {proj.exists ? 
                 	(
-                <tr>
-                <td className="ThumbnailBox">
+                <>
+                <div className="table-row">
                   <Button variant="dark" className="ButtonProject" href={proj.link}>
-                  <img src={proj.thumbnail.default} alt = {proj.name} className="Thumbnail"/>
+                  <img src={proj.thumbnail} alt = {proj.name} className="Thumbnail"/>
                   <p className="ParagraphFont">{proj.name}</p>
                   </Button>
-                </td>
-                </tr>
+                </div>
+                <br/>
+                </>
                 ) : null}
                 {proj.exists2 ? 
                 	(
-                <tr>
-                <td className="ThumbnailBox">
+                <>
+                <div className="table-row">
                   <Button variant="dark" className="ButtonProject" href={proj.link2}>
-                  <img src={proj.thumbnail2.default} alt = {proj.name2} className="Thumbnail"/>
+                  <img src={proj.thumbnail2} alt = {proj.name2} className="Thumbnail"/>
                   <p className="ParagraphFont">{proj.name2}</p>
                   </Button>
-                </td>
-                </tr>
+                </div>
+                <br/>
+                </>
                 ) : null}
                 {proj.exists3 ? 
                 	(
-                <tr>
-                <td className="ThumbnailBox">
+                <>
+                <div className="table-row">
                   <Button variant="dark" className="ButtonProject" href={proj.link3}>
-                  <img src={proj.thumbnail3.default} alt = {proj.name3} className="Thumbnail"/>
+                  <img src={proj.thumbnail3} alt = {proj.name3} className="Thumbnail"/>
                   <p className="ParagraphFont">{proj.name3}</p>
                   </Button>
-                </td>
-                </tr>
+                </div>
+                <br/>
+                </>
                  ) : null}
               </MediaQuery>
-              </span>
+              </div>
             )}
             </Spring>
-              </>
       ));
 
     return(
       <div className="ProjectBackground">
-      <table className="ProjectTable">
+      <div className="ProjectTable">
         {WebApps}
-      </table>
+      </div>
       </div>
       );
   }
@@ -166,7 +166,7 @@ export default function ProjectView(){
               checked={radioState === radio.value}
               onChange={
                 (e) => {
-                doStuff(e.currentTarget.value);
+                changeState(e.currentTarget.value);
                 }}
               size="lg"
               className="SelectorButton"

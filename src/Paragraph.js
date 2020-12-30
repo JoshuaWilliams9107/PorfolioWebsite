@@ -16,6 +16,7 @@ export default class Paragraph extends React.Component {
   render(){
 
     return (
+      <>
         <VisibilitySensor active = {this.active} onChange={this.onChangeVisibility} active={!this.visible}>
         {({ isVisible }) => (
           <div>
@@ -35,6 +36,7 @@ export default class Paragraph extends React.Component {
           </div>
           )}
         </VisibilitySensor>
+      </>
 
       
     );

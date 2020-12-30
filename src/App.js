@@ -12,9 +12,6 @@ import React from 'react';
 import Title from './Title.js';
 import Button from 'react-bootstrap/Button';
 import Resume from './content/JoshuaWilliamsResume2020.pdf';
-import Carousel from 'react-bootstrap/Carousel';
-import LI from './images/LI-Logo.png';
-import Github from './images/GitHub_Logo.png';
 
 function App() {
   return (
@@ -45,24 +42,19 @@ function App() {
       <br/>
       <Paragraph fontStyle="SubHeader" contents="- ABOUT ME -" delay={0}/>
       <Paragraph fontStyle="ParagraphFont" contents="" delay={100}/>
-
       <Paragraph fontStyle="ParagraphFont" contents="I've enjoyed programming all my life and I'm always excited to learn new technologies." delay={100}/>
-      <Button variant="light" href={Resume} className="ButtonResume" target>View Resume</Button>
+      <Paragraph fontStyle="ParagraphFont" contents="I'm a full-stack developer with an emphasis on backend." delay={100}/>
+      <Button variant="light" href={Resume} className="ButtonResume">View Resume</Button>
       <br/>
       <br/>
       <br/>
       <br/>
       <br/>
       <Paragraph fontStyle="SubHeader" contents="- SKILLS -" delay={0}/>
-
       <div >
       <SkillsTable/>
-
-      
       <SoftwareTable/>
       </div>
-      <br/>
-      <br/>
       <br/>
       <br/>
       <Paragraph fontStyle="SubHeader" contents="- PROJECTS -"/>
@@ -73,10 +65,14 @@ function App() {
 
       <br/>
       <span className="ContactButton">
-      <Button  variant="light" href="https://www.linkedin.com/"><img src={LI} className="LinkedIn"/></Button>
+      <Button  variant="light" href="https://www.linkedin.com/"><img src={process.env.PUBLIC_URL + "/images/LI-Logo.png"} className="LinkedIn"/></Button>
       </span>
+    <MediaQuery maxWidth={799}>
+      <br/>
+      <br/>
+    </MediaQuery>
       <span className="ContactButton">
-      <Button variant="light" href="https://github.com/JoshuaWilliams9107"><img src={Github} className="Github"/></Button>
+      <Button variant="light" href="https://github.com/JoshuaWilliams9107"><img src={process.env.PUBLIC_URL + "/images/GitHub_Logo.png"} className="Github"/></Button>
       </span>
       <br/>
       <br/>

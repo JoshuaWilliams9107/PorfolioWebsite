@@ -29,6 +29,14 @@
   background: linear-gradient(180deg, rgba(57,67,75,1) 6%, rgba(87,103,117,1) 31%, rgba(87,103,117,1) 84%);
   /*box-shadow: -1px 10px 10px black;*/
 }
+.Footer{
+  width:100%;
+  z-index:0;
+  background: rgb(57,67,75);
+  padding-top:30px;
+  padding-bottom:30px;
+  /*box-shadow: -1px 10px 10px black;*/
+}
 .BackgroundContainer{
   position:relative;
 }
@@ -80,10 +88,11 @@
   margin-top: 50px;
 }
 
-.BlackText{
+.Email{
   font-family:PTSans;
-  font-size:25px;
+  font-size:40px;
   color:black;
+
 }
 .Icon{
   width: 300px;
@@ -348,6 +357,7 @@
 
 }
 .ContactButton{
+  margin-top:15px;
 	padding:15px;
 }
 .cell{

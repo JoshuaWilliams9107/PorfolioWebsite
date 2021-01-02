@@ -45,16 +45,30 @@ function App() {
       <ProjectView/>
     <footer>
     <Header fontStyle="SubHeader" contents="- CONTACT -"/>
-    <div>
-      <span className="ContactButton">
-      <Button  variant="light" href="https://www.linkedin.com/in/joshua-williams-computing/"><img src={process.env.PUBLIC_URL + "/images/LI-Logo.png"} className="LinkedIn"/></Button>
-      </span>
+    <div className="Footer">
     <MediaQuery maxWidth={799}>
-    	<br/>
+      <div className="ContactButton">
+      	<Button  variant="light" href="https://www.linkedin.com/in/joshua-williams-computing/"><img src={process.env.PUBLIC_URL + "/images/LI-Logo.png"} className="LinkedIn"/></Button>
+      </div>
+      <div className="ContactButton">
+      	<Button variant="light" href="https://github.com/JoshuaWilliams9107"><img src={process.env.PUBLIC_URL + "/images/GitHub_Logo.png"} className="Github"/></Button>
+      </div>
+      <div className="ContactButton">
+      	<Button className="Email" variant="light" href="mailto:JoshuaWilliams9107@gmail.com">Email</Button>
+      </div>
     </MediaQuery>
+    <MediaQuery minWidth={800}>
       <span className="ContactButton">
-      <Button variant="light" href="https://github.com/JoshuaWilliams9107"><img src={process.env.PUBLIC_URL + "/images/GitHub_Logo.png"} className="Github"/></Button>
+      	<Button  variant="light" href="https://www.linkedin.com/in/joshua-williams-computing/"><img src={process.env.PUBLIC_URL + "/images/LI-Logo.png"} className="LinkedIn"/></Button>
       </span>
+      <span className="ContactButton">
+      	<Button variant="light" href="https://github.com/JoshuaWilliams9107"><img src={process.env.PUBLIC_URL + "/images/GitHub_Logo.png"} className="Github"/></Button>
+      </span>
+      <span className="ContactButton">
+      	<Button className="Email" variant="light" href="mailto:JoshuaWilliams9107@gmail.com">Email</Button>
+      </span>
+    </MediaQuery>
+      
     </div>
     </footer>
     </div>

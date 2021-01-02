@@ -27,7 +27,7 @@ export default function TitleCard() {
             <CanvasBackground/>
             <img className="CircleImage" src={process.env.PUBLIC_URL + "/images/JoshuaWilliams.jpg"}/>
             <h1 className="WhiteHeader">Joshua Williams</h1>
-            <p className="WhiteFooter"> Full-Stack Developer </p>
+            <p className="WhiteFooter"> Software Developer </p>
         </div>
         </div>
         )}

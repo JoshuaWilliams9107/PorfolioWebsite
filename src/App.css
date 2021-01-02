@@ -53,6 +53,13 @@
   font-family:PTSans;
   font-size:25px;
   color:#E6E8DD;
+  text-align:center;
+}
+.ParagraphFontLeft{
+  font-family:PTSans;
+  font-size:25px;
+  color:#E6E8DD;
+  text-align:left;
 }
 .InnerTitle{
   position:relative;
@@ -104,23 +111,23 @@
     padding-bottom:50px;
     z-index: 10;
     left: 50%;
-    margin-left: -119.735px;
+    margin-left: -113.115px;
     top: 50%;
     margin-top: 485px;
   }
   .AboutMeContainer{
 	margin: 0 auto;
 	width:95%;
-	background-color: #E6E8DD; 
 	text-align:left;
+  padding:20px;
   }
 }
 @media screen and (min-width: 800px) {
 .AboutMeContainer{
 	margin: 0 auto;
 	width:70%;
-	background-color: #E6E8DD; 
 	text-align:left;
+  padding:20px;
 }
 .WhiteHeader {
   position:absolute;
@@ -144,7 +151,7 @@
   padding-bottom:50px;
   z-index: 10;
   left: 50%;
-  margin-left: -153.885px;
+  margin-left: -145.385px;
   top: 50%;
   margin-top: 485px;
 }
@@ -317,6 +324,9 @@
 .ButtonResume{
   font-family:PTSans;
   font-size:25px;
+}
+.Center{
+  text-align: center;
 }
 .SelectorButton{
    background-color: #97aec2;

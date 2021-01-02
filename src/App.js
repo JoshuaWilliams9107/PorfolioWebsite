@@ -4,7 +4,6 @@ import TitleCard from './TitleCard.js'
 import Paragraph from './Paragraph.js'
 import SkillsTable from './SkillsTable.js'
 import SoftwareTable from './SoftwareTable.js'
-import Icon from './Icon.js'
 import Background from './Background.js'
 import MediaQuery from 'react-responsive'
 import ProjectView from './Projects.js'
@@ -26,34 +25,26 @@ function App() {
       <div className="TitleCardPlaceholder">
       </div>
      <br/><br/><br/><br/><br/><br/>
-     
-      <Paragraph fontStyle="ParagraphFont" contents="Hello! I'm Josh" delay={500}/>
-    <br/><br/><br/>
-    <MediaQuery minWidth={800}>
-      <Paragraph fontStyle="ParagraphFont" contents="I'm a recent Clemson graduate with a passion for making high quality software." delay={750}/>
-    </MediaQuery>
-    <MediaQuery maxWidth={799}>
-      <Paragraph fontStyle="ParagraphFont" contents="I'm a recent Clemson graduate with a passion for making high quality software." delay={0}/>
-    </MediaQuery>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <Paragraph fontStyle="SubHeader" contents="- ABOUT ME -" delay={0}/>
-      <Paragraph fontStyle="ParagraphFont" contents="" delay={100}/>
-      <Paragraph fontStyle="ParagraphFont" contents="I've enjoyed programming all my life and I'm always excited to learn new technologies." delay={100}/>
-      <Paragraph fontStyle="ParagraphFont" contents="I'm a full-stack developer with an emphasis on backend." delay={100}/>
-      <Button variant="light" href={Resume} className="ButtonResume">View Resume</Button>
-      <br/>
+      <div className="AboutMeContainer">
+	      <Paragraph fontStyle="ParagraphFont" contents="Hello! I'm Josh" delay={500}/>
+	      <MediaQuery minWidth={800}>
+	      	<Paragraph fontStyle="ParagraphFontLeft" contents="Recent Computer Science (BS) Clemson graduate with experience in the complete software development process.  I’ve loved programming and technology all of my life. I’m looking to find a position that allows me constantly learn and use my experience as well as my passion to create valuable software." delay={500}/>
+	      </MediaQuery>
+	      <MediaQuery maxWidth={799}>
+	      	<Paragraph fontStyle="ParagraphFont" contents="Recent Computer Science (BS) Clemson graduate with experience in the complete software development process.  I’ve loved programming and technology all of my life. I’m looking to find a position that allows me constantly learn and use my experience as well as my passion to create valuable software." delay={0}/>
+	      </MediaQuery>
+	      <div className="Center">
+	      	<Button variant="light" href={Resume} className="ButtonResume">View Resume</Button>
+	      </div>
+      </div>
       <br/>
       <br/>
       <br/>
       <br/>
       <Paragraph fontStyle="SubHeader" contents="- SKILLS -" delay={0}/>
       <div >
-      <SkillsTable/>
-      <SoftwareTable/>
+	      <SkillsTable/>
+	      <SoftwareTable/>
       </div>
       <br/>
       <br/>

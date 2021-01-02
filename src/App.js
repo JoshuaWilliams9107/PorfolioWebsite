@@ -54,7 +54,7 @@ function App() {
       	<Button variant="light" href="https://github.com/JoshuaWilliams9107"><img src={process.env.PUBLIC_URL + "/images/GitHub_Logo.png"} className="Github"/></Button>
       </div>
       <div className="ContactButton">
-      	<Button className="Email" variant="light" href="mailto:JoshuaWilliams9107@gmail.com">Email</Button>
+      	<Button className="Email" variant="light" href="mailto:JoshuaWilliams9107@gmail.com">Email Me</Button>
       </div>
     </MediaQuery>
     <MediaQuery minWidth={800}>
@@ -65,7 +65,7 @@ function App() {
       	<Button variant="light" href="https://github.com/JoshuaWilliams9107"><img src={process.env.PUBLIC_URL + "/images/GitHub_Logo.png"} className="Github"/></Button>
       </span>
       <span className="ContactButton">
-      	<Button className="Email" variant="light" href="mailto:JoshuaWilliams9107@gmail.com">Email</Button>
+      	<Button className="Email" variant="light" href="mailto:JoshuaWilliams9107@gmail.com">Email Me</Button>
       </span>
     </MediaQuery>
       

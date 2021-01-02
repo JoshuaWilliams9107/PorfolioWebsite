@@ -3,7 +3,7 @@ import VisibilitySensor from "react-visibility-sensor";
 import React from 'react';
 
 
-export default class Paragraph extends React.Component {
+export default class Header extends React.Component {
   visible = false;
   constructor(props) {
     super(props);
@@ -17,7 +17,7 @@ export default class Paragraph extends React.Component {
 
     return (
       <>
-        <VisibilitySensor active = {this.active} onChange={this.onChangeVisibility} active={!this.visible} partialVisibility={true}>
+        <VisibilitySensor active = {this.active} onChange={this.onChangeVisibility} active={!this.visible}>
         {({ isVisible }) => (
           <div>
             <Spring
@@ -27,9 +27,9 @@ export default class Paragraph extends React.Component {
             >
             {props =>(
             <div style={props}>
-               <p className={this.props.fontStyle}>
+               <h2 className={this.props.fontStyle}>
                 {this.props.contents}
-                </p>
+                </h2>
             </div>
             )}
             </Spring>
